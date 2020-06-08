@@ -7,8 +7,6 @@ const repoName = 'sitebuildconfig';  //Repo name
 const repoPath = path.join(__dirname);
 // const repoPath = path.join(__dirname,repoName);
 
-console.log(repoPath);
-
 shellJs.cd(repoPath);
 shellJs.exec(`git checkout ${baseBranch}`);
 shellJs.exec(`git pull origin ${baseBranch}`);
