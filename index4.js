@@ -4,7 +4,10 @@ const gitHubUrl = 'https://github.com/kalpanapadalkar/sitebuildconfig';
 const baseBranch = "master";
 
 const repoName = 'sitebuildconfig';  //Repo name
-const repoPath = path.join(__dirname,repoName);
+const repoPath = path.join(__dirname);
+// const repoPath = path.join(__dirname,repoName);
+
+console.log(repoPath);
 
 shellJs.cd(repoPath);
 shellJs.exec(`git checkout ${baseBranch}`);
