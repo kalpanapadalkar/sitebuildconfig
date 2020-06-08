@@ -10,14 +10,13 @@ shellJs.cd('/Users/kalpana.padalkar/Documents/sitebuildconfig2/sitebuildconfig')
 // Repo name
 const repo = 'sitebuildconfig';  //Repo name
 // User name and password of your GitHub
-const userName = 'kalpanapadalkar';
-const password = 'Om@16shree';
+
 // Set up GitHub url like this so no manual entry of user pass needed
 const gitHubUrl = 'https://github.com/kalpanapadalkar/sitebuildconfig';
 // const gitHubUrl = `https://${userName}:${password}@github.com/${userName}/${repo}`;
 // add local git config like username and email
-// simpleGit.addConfig('user.email','kalpana.padalkar@lrn.com');
-// simpleGit.addConfig('user.name','Kalpana Padalkar');
+simpleGit.addConfig('user.email','kalpana.padalkar@lrn.com');
+simpleGit.addConfig('user.name','Kalpana Padalkar');
 // Add remore repo url as origin to repo
 // simpleGitPromise.addRemote('origin',gitHubUrl);
 // Add all files for commit
@@ -28,6 +27,13 @@ const gitHubUrl = 'https://github.com/kalpanapadalkar/sitebuildconfig';
        }, (failedAdd) => {
           console.log('adding files failed');
     });
+    // Pull from  online repository
+    simpleGitPromise.pull('origin','master')
+    .then((success) => {
+      console.log('repo successfully pulled');
+   },(failed)=> {
+      console.log('repo pull failed');
+   });
 // Commit files as Initial Commit
  simpleGitPromise.commit('Intial commit by simplegit')
    .then(
@@ -36,6 +42,7 @@ const gitHubUrl = 'https://github.com/kalpanapadalkar/sitebuildconfig';
      }, (failed) => {
         console.log('failed commmit');
  });
+
 // Finally push to online repository
  simpleGitPromise.push('origin','master')
     .then((success) => {
