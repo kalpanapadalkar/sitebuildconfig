@@ -19,6 +19,15 @@ const gitHubUrl = 'https://github.com/kalpanapadalkar/sitebuildconfig';
 // simpleGit.addConfig('user.name', 'Kalpana Padalkar');
 // Add remore repo url as origin to repo
 // simpleGitPromise.addRemote('origin',gitHubUrl);
+
+// Pull from  online repository
+simpleGitPromise.pull('origin', 'master')
+   .then((success) => {
+      console.log('repo successfully pulled');
+   }, (failed) => {
+      console.log('repo pull failed');
+   });
+
 // Add all files for commit
 simpleGitPromise.add('.')
    .then(
@@ -27,13 +36,7 @@ simpleGitPromise.add('.')
       }, (failedAdd) => {
          console.log('adding files failed');
       });
-// Pull from  online repository
-simpleGitPromise.pull('origin', 'master')
-   .then((success) => {
-      console.log('repo successfully pulled');
-   }, (failed) => {
-      console.log('repo pull failed');
-   });
+
 // Commit files as Initial Commit
 simpleGitPromise.commit('Intial commit by simplegit')
    .then(
