@@ -26,7 +26,7 @@ exec('cd ${dirPath}', function(err, stdout, stderr) {
                 console.log("git added success" ); console.log(stdout);
             })
 
-            exec("git commit -am 'committed changes for testing for execute'", function(err, stdout, stderr) {
+            exec("git commit -am 'committed changes for testing for exec'", function(err, stdout, stderr) {
                 console.log("git committed success" ); console.log(stdout);
             })
             exec("git push", function(err, stdout, stderr) {
