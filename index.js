@@ -21,12 +21,12 @@ simpleGit.addConfig('user.name', 'Kalpana Padalkar');
 // simpleGitPromise.addRemote('origin',gitHubUrl);
 
 // Pull from  online repository
-simpleGitPromise.pull('origin', 'master')
-   .then((success) => {
-      console.log('repo successfully pulled');
-   }, (failed) => {
-      console.log('repo pull failed');
-   });
+// simpleGitPromise.pull('origin', 'master')
+//    .then((success) => {
+//       console.log('repo successfully pulled');
+//    }, (failed) => {
+//       console.log('repo pull failed');
+//    });
 
 // Add all files for commit
 simpleGitPromise.add('.')
