@@ -10,7 +10,7 @@ var exec = require('child_process').exec;
 //     exec = require('child_process').exec;
 const dirPath = __dirname;
 
-console.log(dirPath);
+// console.log(dirPath);
 
 exec('cd ${dirPath}', function(err, stdout, stderr) {
         console.log("cd: " + err + " : "  + stdout);
