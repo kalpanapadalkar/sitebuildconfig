@@ -15,8 +15,8 @@ const repo = 'sitebuildconfig';  //Repo name
 const gitHubUrl = 'https://github.com/kalpanapadalkar/sitebuildconfig';
 // const gitHubUrl = `https://${userName}:${password}@github.com/${userName}/${repo}`;
 // add local git config like username and email
-// simpleGit.addConfig('user.email', 'kalpana.padalkar@lrn.com');
-// simpleGit.addConfig('user.name', 'Kalpana Padalkar');
+simpleGit.addConfig('user.email', 'kalpana.padalkar@lrn.com');
+simpleGit.addConfig('user.name', 'Kalpana Padalkar');
 // Add remore repo url as origin to repo
 // simpleGitPromise.addRemote('origin',gitHubUrl);
 
