@@ -12,7 +12,8 @@ const dirPath = __dirname;
 
 // console.log(dirPath);
 
-exec(`cd ${dirPath} && git checkout master && git pull && git add . && git commit -am "Added changes for testing" && git push origin master`)
+exec(`cd ${dirPath} && git checkout master && git pull && git commit -am "Added changes for testing" && git push origin master`)
+// exec(`cd ${dirPath} && git checkout master && git pull && git add . && git commit -am "Added changes for testing" && git push origin master`)
 // exec(`cd ${dirPath} && git reset --hard && git clean -f && git checkout master && git pull && git add . && git commit -am "Added changes for testing" && git push origin master`)
 
 // exec('cd ${dirPath}', function(err, stdout, stderr) {
@@ -30,6 +31,9 @@ exec(`cd ${dirPath} && git checkout master && git pull && git add . && git commi
 //             })
 
 //             exec("git commit -am 'committed changes for testing for exec'", function(err, stdout, stderr) {
+//                 console.log("git committed successfully done" ); console.log(stdout);
+//             })
+//             exec("git commit -m 'committed changes for testing for exec'", function(err, stdout, stderr) {
 //                 console.log("git committed successfully done" ); console.log(stdout);
 //             })
 //             exec("git push", function(err, stdout, stderr) {
